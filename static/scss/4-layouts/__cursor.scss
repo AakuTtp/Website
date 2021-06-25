@@ -1,0 +1,23 @@
+body{
+    cursor: none;
+}
+.custom_cursor{
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: $primary-orange;
+    pointer-events: none;
+    z-index: 5;
+
+}
+.custom_cursor_two{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    transition: all 0.25s linear;
+    pointer-events: none;
+    z-index: 5;
+}

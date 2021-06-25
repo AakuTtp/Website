@@ -1,0 +1,25 @@
+.social_media_bar{
+    opacity: 0;
+    position: fixed;
+    bottom: 0;
+    left: 40px;
+    width: 40px;
+    height: auto;
+    @include flexbox(space-between,column);
+    .social_media_icons{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        a{
+            font-size: 20px;
+            padding: 5px;
+        }
+    }
+    .bottom_line{
+        width: 1px;
+        height: 100px;
+        background: #fff;
+    }
+}

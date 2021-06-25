@@ -1,0 +1,111 @@
+nav{
+    width: 1200px;
+    height: 100px;
+    // border: 1px solid #fff;
+    margin: 0 auto;
+    @include flexbox(space-between,row);
+    .nav_logo{
+        width: auto;
+        height: auto;
+        h2{
+            font-family: $caveat;
+        }
+    }
+    .nav_items{
+        width: auto;
+        height: auto;
+        display: flex;
+        transition: 0.5s;
+        .nav_links{
+            width: auto;
+            height: auto;
+            display: flex;
+            margin-right: 30px;
+            li{
+                position: relative;
+                top: -10px;
+                list-style: none;
+                opacity: 0;
+                transition: 0.5s;
+                margin-right:15px;
+                &:last-child{
+                    margin-right: 0px;
+                }
+            }
+
+            
+        }
+        .ext_links{
+            a{
+                padding: 10px 20px;
+                border: 1px solid $primary-orange;
+                color: $primary-orange;
+                border-radius: 5px;
+            }
+        }
+        @media only screen and (max-width: 700px)
+        {
+            &{
+                position: fixed;
+                right: 0;
+                top: 0;
+                width: 60%;
+                height: 100vh;
+                background: #000;
+                justify-content: space-around;
+                align-items: center;
+                flex-direction: column;
+                transform: translateX(100%);
+                .nav_links{
+                    flex-direction: column;
+                    
+                    li{
+                        position: relative;
+                        transition: 0.5s;
+                        right: -50px;
+                        opacity: 0;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+        
+    }
+    .burger_menu{
+        width: auto;
+        height: auto;
+        display: none;
+        z-index: 1;
+        div{
+            width: 0px;
+            height: 2px;
+            background: #fff;
+            margin-bottom: 5px;
+            transition: 0.5s ease;
+        }
+        div:first-child{
+            width: 0px;
+            background: $primary-orange;
+        }
+        div:last-child{
+            float: right;
+            width: 0px;
+            margin-bottom: 0px;
+            background: $primary-orange;
+            
+        }
+        @media only screen and (max-width: 700px)
+        {
+            &{
+                display: block;
+            }
+        }
+    }
+    @media only screen and (max-width: 1200px){
+        &{
+            width: 90%;
+        }
+    }
+    
+}
+
